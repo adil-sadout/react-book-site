@@ -1,0 +1,111 @@
+
+
+
+
+.navMenu{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    background: #202020;
+    position: absolute;
+    
+}
+
+
+.navStyle{
+    background: #202020;
+    display: flex;
+    vertical-align: middle;
+    
+}
+
+.navButtonStyle  {
+    background:none;
+    outline:none;
+    cursor: pointer;
+}
+
+
+.listStyle {
+    display: flex;
+    align-items: center;
+    border-left: 1px gray solid;
+    padding: 5px;
+    overflow-x: auto;
+    
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.listStyle::-webkit-scrollbar-track
+  {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      background-color: #F5F5F5;
+  }
+  
+  .listStyle::-webkit-scrollbar
+  {
+      width: 10px;
+      background-color: #F5F5F5;
+  }
+  
+  .listStyle::-webkit-scrollbar-thumb
+  {
+      background-color: #0ae;
+      border-radius: 5px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.buttonStyle {
+    background: #FFA500;
+    padding: 7px;
+    margin: 0 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hiddenList{
+    text-align: center;
+    color: white;
+    padding: 30px;
+    border-top: 1px solid #303030;
+    border-bottom: 1px solid #303030;
+}
+
+
+
+
+.hidden{
+    display: none !important; 
+}
