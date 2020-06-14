@@ -9,7 +9,6 @@ class Book extends Component{
         const {mainId} = this.props;
         return(
             <div className='grid-container'>
-                <p>{this.props.mainId}</p>
                 
 
                 {this.props.categories[this.props.mainId].modules.algorithme.map(modulename =>(

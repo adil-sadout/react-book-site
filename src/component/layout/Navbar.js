@@ -36,15 +36,11 @@ class Navbar extends Component {
                     </button>
 
 
+                    <NavbarCategory getCategory={this.props.getCategory} categories={this.props.categories} />
 
 
-                    <div className='listStyle'>
-                        {this.props.categories.map(category =>(
-                                    <NavbarCategory key={uuidv4()} getCategory={this.props.getCategory} category={category} />
-                                )
-                            )
-                        }
-                    </div>
+
+                    
                 </div>
 
 

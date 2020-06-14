@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './component/layout/Navbar'
-import Book from './component/books/Book'
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Navbar from './component/layout/Navbar';
+import Book from './component/books/Book';
+import About from './component/pages/About';
+import Contact from './component/pages/Contact';
 
 class App extends Component {
 
@@ -148,9 +150,25 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+        
           
-          <Navbar categories={this.state.categories}  getCategory={this.getCategory.bind(this)}/>
-          <Book categories={this.state.categories} mainId={this.state.mainId}/>
+
+
+
+          <Switch>
+                  <Route exact path='/' render={props =>(
+                    <Fragment>
+                      <Navbar categories={this.state.categories}  getCategory={this.getCategory.bind(this)}/>
+                      <Book categories={this.state.categories} mainId={this.state.mainId}/>
+                    </Fragment>
+                  )} />
+
+                  <Route exact path='/about' component={About}/>
+
+                  <Route exact path='/about' component={Contact}/>
+                  
+
+              </Switch>
 
         </div>
       </Router>

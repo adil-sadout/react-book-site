@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import './Navbar.css';
+import NavbarCategoryItem from './NavbarCategoryItem';
+import { v4 as uuidv4 } from 'uuid';
 
 class NavbarCategory extends Component{
 
@@ -11,15 +13,15 @@ class NavbarCategory extends Component{
 
         return (
             <Fragment>
-                <button className='buttonStyle' onClick={e => 
-                    {   
-                        e.preventDefault();
-                        this.props.getCategory(this.props.category.id);
-                    }}>
-                    {this.props.category.name}
-                </button>
+                <div className='listStyle'>
+                        {this.props.categories.map(category =>(
+                                    <NavbarCategoryItem key={uuidv4()} getCategory={this.props.getCategory} category={category} />
+                                )
+                            )
+                        }
+                </div>
             </Fragment>
-            /*e => this.upvotes(e, arg1, arg2, arg3)*/
+            
             )
         
     }
